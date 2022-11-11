@@ -1,0 +1,24 @@
+{
+  "name": "webappdev2-api-labs-2022-rf",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000W\u0000e\u0000b\u0000 \u0000A\u0000p\u0000p\u0000 \u0000D\u0000e\u0000v\u0000 \u00002\u0000:\u0000 \u0000W\u0000e\u0000b\u0000 \u0000A\u0000P\u0000I\u0000 \u0000L\u0000a\u0000b\u0000s\u0000\r\u0000 \u0000\r\u0000 \u0000P\u0000r\u0000a\u0000c\u0000t\u0000i\u0000c\u0000a\u0000l\u0000 \u0000l\u0000a\u0000b\u0000s\u0000 \u0000f\u0000o\u0000r\u0000 \u0000t\u0000h\u0000e\u0000 \u0000W\u0000A\u0000D\u00002\u0000 \u0000m\u0000o\u0000d\u0000u\u0000l\u0000e\u0000,\u0000 \u0000B\u0000S\u0000c\u0000.\u0000 \u0000A\u0000p\u0000p\u0000l\u0000i\u0000e\u0000d\u0000/\u0000S\u0000o\u0000f\u0000t\u0000w\u0000a\u0000r\u0000e\u0000 \u0000S\u0000y\u0000s\u0000t\u0000e\u0000m\u0000s\u0000 \u0000D\u0000e\u0000v\u0000/\u0000F\u0000o\u0000r\u0000e\u0000n\u0000s\u0000i\u0000c\u0000s\u0000 \u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfinnegan111/webappdev2-api-labs-2022-rf.git"
+  },
+  "author": " <rfinnegan111>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rfinnegan111/webappdev2-api-labs-2022-rf/issues"
+  },
+  "homepage": "https://github.com/rfinnegan111/webappdev2-api-labs-2022-rf#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.20"
+  }
+}
