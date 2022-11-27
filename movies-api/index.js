@@ -5,7 +5,7 @@ import './db';
 import './seedData';
 import usersRouter from './api/users';
 import session from 'express-session';
-import authenticate from './authenticate';
+import passport from './authenticate';
 
 dotenv.config();
 
@@ -28,11 +28,9 @@ app.use('/api/movies', authenticate, moviesRouter);
 app.use('/api/users', usersRouter);
 app.use(errHandler);
 //session middleware
-app.use(session({
-  secret: 'ilikecake',
-  resave: true,
-  saveUninitialized: true
-}));
+app.use(passport.initialize());
+// Add passport.authenticate(..)  to middleware stack for protected routes​
+app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRouter);
 
 app.listen(port, () => {
   console.info(`Server running at ${port}`);
