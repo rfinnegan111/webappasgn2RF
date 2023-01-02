@@ -8,6 +8,7 @@ import PrivateRoute from "./privateRoute";
 import AuthHeader from "./authHeader";
 import SignUpPage from "./signUpPage";
 import MovieProvider from "./moviesContext";
+import UpcomingMovieProvider from "./upcomingMoviesContext";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/signup" component={SignUpPage} />
           <PrivateRoute path="/movies" component={Movies} />
           <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/upcoming" component={UpcomingMovies} />
           <Redirect from="*" to="/" />
         </Switch>
         </MovieProvider>
