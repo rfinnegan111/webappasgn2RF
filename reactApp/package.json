@@ -26,6 +26,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
-  ,"proxy":"http://localhost:8080"
+  },
+  "proxy": "http://localhost:8080",
+  "description": "This archive contains the code demonstrating a custom solution for protected routes and authentication in a React app.  Run npm install followed by npm start.",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }
