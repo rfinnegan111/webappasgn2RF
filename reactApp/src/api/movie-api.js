@@ -35,3 +35,12 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
+
+  export const getTvs = () => {
+    return fetch(
+       '/api/tvs',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
