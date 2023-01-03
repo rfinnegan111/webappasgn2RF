@@ -18,9 +18,9 @@ export const PublicPage = () => {
  export const Movies = () => {
     const context = useContext(MoviesContext);
     return <>
-        <h2>Movies Data </h2>
+        <h2>Movies</h2>
         <div>
-            {context.movies.results.map(movie => { return <>{movie.id},{movie.title}<br /></> })}
+            {context.movies.results.map(movie => { return <li>Movie ID: {movie.id} <br></br> Movie Name: {movie.title} <br></br> Release Date: {movie.release_date}<br></br> Run Time: {movie.runtime} <br></br><br></br> Overview: {movie.overview}<br /></li> })}
         </div>
     </>
 }
@@ -28,10 +28,10 @@ export const PublicPage = () => {
 export const UpcomingMovies = () => {
     const context = useContext(UpcomingMoviesContext);
     return <>
-        <h2>Upcoming Movies Data </h2>
+        <h2>Upcoming Movies</h2>
         <div>
 
-            {context.upcomingMovies.results.map(upcomingMovie => { return <>{upcomingMovie.id},{upcomingMovie.title}<br /></> })}
+            {context.upcomingMovies.results.map(upcomingMovie => { return <li>Movie ID: {upcomingMovie.id}<br></br> Movie Name: {upcomingMovie.title}<br></br> Release Date: {upcomingMovie.release_date}<br></br> Run Time: {upcomingMovie.runtime} <br></br><br></br> Overview: {upcomingMovie.overview}<br /></li> })}
         
         </div>
     </>
@@ -40,9 +40,9 @@ export const UpcomingMovies = () => {
 export const Tvs = () => {
     const context = useContext(TvsContext);
     return <>
-        <h2>Tv Series Data </h2>
+        <h2>Tv Series</h2>
         <div>
-            {context.tvs.results.map(tv => { return <>{tv.id},{tv.name}<br /></> })}
+            {context.tvs.results.map(tv => { return <li>Series ID: {tv.id}<br></br> Series Name: {tv.name} <br></br> Release Date: {tv.first_air_date} <br></br><br></br> Overview: {tv.overview}<br /></li> })}
         </div>
     </>
 }

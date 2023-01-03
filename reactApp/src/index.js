@@ -10,33 +10,21 @@ import React from "react";
   import MovieProvider from "./moviesContext";
   import UpcomingMovieProvider from "./upcomingMoviesContext";
   import TvProvider from "./tvsContext";
-  
+  import "./css/\style.css"
 
   const App = () => {
     return (
       <BrowserRouter>
         <AuthProvider>
           <AuthHeader />
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/public">Public</Link>
-            </li>
-            <li>
-              <Link to="/movies">Movies</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-            <li>
-              <Link to="/upcoming">Upcoming Movies</Link>
-            </li>
-            <li>
-              <Link to="/tvs">Tv Series</Link>
-            </li>
-          </ul>
+          <div class="topnav">
+            <a href="#home"><Link to="/">Home</Link></a>
+            <a href="#public"><Link to="/public">Public</Link></a>
+            <a href="#profile"><Link to="/profile">Profile</Link></a>
+            <a href="#movies"><Link to="/movies">Movies</Link></a>
+            <a href="#upcoming"><Link to="/upcoming">Upcoming Movies</Link></a>
+            <a href="#tvs"><Link to="/tvs">Tv Series</Link></a>
+          </div> 
           <UpcomingMovieProvider>
           <MovieProvider>
             <TvProvider>

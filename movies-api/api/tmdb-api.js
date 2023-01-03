@@ -10,8 +10,32 @@ export const getMovies = () => {
       return response.json();
     })
     .catch((error) => {
-       throw error
+       throw error;
     });
+  };
+
+  export const getMovie = (id) => {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.TMDB_KEY}`
+    ).then((response) => {
+      if (!response.ok) {
+        throw new Error(response.json().message);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+   });
+  };
+
+  export const getMovieReviews = (id) => {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.TMDB_KEY}`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        return json.results;
+      });
   };
   
 export const getUpcomingMovies = () => {
@@ -24,7 +48,7 @@ export const getUpcomingMovies = () => {
         return response.json();
     })
         .catch((error) => {
-            throw error
+            throw error;
         });
 };
 
@@ -38,6 +62,30 @@ export const getTvs = () => {
     return response.json();
   })
   .catch((error) => {
-     throw error
+     throw error;
   });
+};
+
+export const getTv = (id) => {
+  return fetch(
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.TMDB_KEY}&language=en-US`
+  ).then((response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  })
+  .catch((error) => {
+    throw error;
+ });
+};
+
+export const getTvReviews = (id) => {
+  return fetch(
+    `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.TMDB_KEY}&language=en-US`
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      return json.results;
+    });
 };
